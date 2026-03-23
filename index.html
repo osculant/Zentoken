@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zentoken - Premium cryptocurrency consultancy based in Miami, Florida. Expert investment advisory, portfolio management, security audits & market analysis for US and global high-net-worth clients.">
+    <title>Zentoken | Premium Crypto Consultancy – Miami, FL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        :root {
+            --navy: #0A1428;
+            --electric: #00D4FF;
+            --gold: #FFD700;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .logo-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0A1428 0%, #001122 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(255, 215, 0, 0.12) 0%, transparent 60%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        .crypto-grid {
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(to right, #00D4FF, #FFD700);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 212 255 / 0.25);
+        }
+        
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-[#0A1428] text-white overflow-x-hidden">
+    <!-- Top Bar -->
+    <div class="hidden md:flex bg-[#0A1428]/80 border-b border-white/10 py-2 text-sm">
+        <div class="max-w-screen-2xl mx-auto px-8 flex justify-between items-center w-full">
+            <div class="flex items-center gap-6 text-white/70">
+                <a href="tel:+13055550199" class="flex items-center gap-2 hover:text-[#00D4FF] transition-colors">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+1 (305) 555-0199</span>
+                </a>
+                <a href="mailto:hello@zentoken.com" class="flex items-center gap-2 hover:text-[#00D4FF] transition-colors">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>hello@zentoken.com</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-5 text-white/70">
+                <a href="#" class="hover:text-[#FFD700] transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-[#FFD700] transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-[#FFD700] transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="hover:text-[#FFD700] transition-colors"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[#0A1428]/95 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-[#00D4FF] to-[#FFD700] rounded-2xl flex items-center justify-center shadow-lg shadow-[#00D4FF]/30">
+                        <span class="text-[#0A1428] font-bold text-3xl leading-none logo-font">Z</span>
+                    </div>
+                    <div>
+                        <span class="logo-font text-3xl font-semibold tracking-tighter text-white">Zentoken</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-10 text-sm font-medium">
+                    <a href="#home" class="nav-link text-white/90 hover:text-white">Home</a>
+                    <a href="#services" class="nav-link text-white/90 hover:text-white">Services</a>
+                    <a href="#about" class="nav-link text-white/90 hover:text-white">About Us</a>
+                    <a href="#insights" class="nav-link text-white/90 hover:text-white">Insights</a>
+                    <a href="#contact" class="nav-link text-white/90 hover:text-white">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <a href="#contact" 
+                       class="hidden md:block px-7 py-3 text-sm font-semibold rounded-2xl border border-white/20 hover:border-[#00D4FF] transition-all">
+                        Get Started
+                    </a>
+                    <a href="#contact" 
+                       class="px-8 py-3.5 bg-gradient-to-r from-[#00D4FF] to-[#FFD700] text-[#0A1428] font-semibold rounded-2xl hover:scale-105 transition-all shadow-xl shadow-[#00D4FF]/40">
+                        Book Consultation
+                    </a>
+
+                    <!-- Mobile Hamburger -->
+                    <button id="mobile-menu-btn"
+                            class="md:hidden w-11 h-11 flex items-center justify-center text-2xl text-white">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0A1428] border-t border-white/10 py-6">
+            <div class="px-8 flex flex-col gap-6 text-lg font-medium">
+                <a href="#home" class="mobile-link">Home</a>
+                <a href="#services" class="mobile-link">Services</a>
+                <a href="#about" class="mobile-link">About Us</a>
+                <a href="#insights" class="mobile-link">Insights</a>
+                <a href="#contact" class="mobile-link">Contact</a>
+                <div class="pt-6 border-t border-white/10">
+                    <a href="#contact" 
+                       class="block w-full py-4 text-center bg-gradient-to-r from-[#00D4FF] to-[#FFD700] text-[#0A1428] font-semibold rounded-2xl">
+                        Book a Free Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg h-screen flex items-center relative crypto-grid">
+        <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center h-full">
+            <!-- Left Content -->
+            <div class="pt-20 md:pt-0 z-10">
+                <div class="inline-flex items-center gap-2 px-6 py-2 rounded-3xl bg-white/10 backdrop-blur-md text-xs font-medium tracking-widest mb-6">
+                    <div class="w-2 h-2 bg-[#FFD700] rounded-full animate-pulse"></div>
+                    TRUSTED BY 400+ HIGH-NET-WORTH CLIENTS WORLDWIDE
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-semibold leading-none tracking-tighter logo-font mb-6">
+                    UNLOCK THE<br>POWER OF<br><span class="bg-clip-text text-transparent bg-gradient-to-r from-[#00D4FF] via-[#FFD700] to-[#00D4FF]">CRYPTO</span>
+                </h1>
+                
+                <p class="text-2xl text-white/80 max-w-lg mb-10">
+                    Premium US-based consultancy delivering secure, high-performance digital asset strategies for American & international investors.
+                </p>
+                
+                <div class="flex flex-wrap gap-5">
+                    <a href="#contact" 
+                       class="px-10 py-5 bg-white text-[#0A1428] font-semibold text-lg rounded-3xl hover:bg-[#FFD700] transition-all flex items-center gap-3 group">
+                        BOOK CONSULTATION
+                        <span class="text-2xl group-hover:rotate-45 transition-transform">→</span>
+                    </a>
+                    
+                    <a href="#services" 
+                       class="px-10 py-5 border-2 border-white/40 hover:border-white font-semibold text-lg rounded-3xl transition-all flex items-center gap-3">
+                        LEARN MORE
+                    </a>
+                </div>
+                
+                <!-- Trust bar -->
+                <div class="mt-16 flex items-center gap-8 text-xs opacity-70">
+                    <div class="flex -space-x-4">
+                        <div class="w-8 h-8 rounded-2xl bg-white/20 border border-white flex items-center justify-center text-xs">🇺🇸</div>
+                        <div class="w-8 h-8 rounded-2xl bg-white/20 border border-white flex items-center justify-center text-xs">🇺🇸</div>
+                        <div class="w-8 h-8 rounded-2xl bg-white/20 border border-white flex items-center justify-center text-xs">🇨🇦</div>
+                    </div>
+                    <div>
+                        <span class="block font-medium">Featured in</span>
+                        <span class="text-[#FFD700]">Forbes • Bloomberg • CoinDesk</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Visual -->
+            <div class="relative hidden md:flex justify-end items-center">
+                <div class="relative w-full max-w-[520px]">
+                    <div class="absolute -left-12 top-20 w-48 h-48 bg-[#00D4FF]/10 rounded-3xl backdrop-blur-xl border border-[#00D4FF]/30 flex items-center justify-center rotate-12">
+                        <i class="fa-solid fa-bitcoin text-8xl text-[#FFD700]"></i>
+                    </div>
+                    
+                    <div class="absolute -right-8 bottom-32 w-64 h-64 bg-gradient-to-br from-[#FFD700]/10 to-transparent rounded-[4rem] backdrop-blur-3xl border border-white/10 flex flex-col items-center justify-center">
+                        <div class="text-5xl font-bold text-[#FFD700] mb-1">$2.84B</div>
+                        <div class="text-sm tracking-widest text-white/70">AUM MANAGED</div>
+                    </div>
+                    
+                    <div class="glass rounded-3xl p-8 shadow-2xl border border-white/10 relative z-10">
+                        <div class="bg-black/70 rounded-2xl p-6">
+                            <div class="flex justify-between items-start mb-8">
+                                <div>
+                                    <div class="text-[#00D4FF] text-sm font-medium">BTC • ETH • SOL</div>
+                                    <div class="text-4xl font-semibold mt-1">+184%</div>
+                                    <div class="text-emerald-400 text-sm">YTD Portfolio Return</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold text-white">$4.2M</div>
+                                    <div class="text-xs text-white/50">Client Portfolio</div>
+                                </div>
+                            </div>
+                            
+                            <div class="h-52 bg-[#0A1428] rounded-2xl relative overflow-hidden flex items-end">
+                                <svg class="w-full h-full" viewBox="0 0 400 200" fill="none">
+                                    <path d="M0 180 Q80 140 160 120 Q240 60 320 40 Q400 20 400 20" 
+                                          stroke="#00D4FF" stroke-width="8" stroke-linecap="round"/>
+                                    <path d="M0 180 Q80 140 160 120 Q240 60 320 40 Q400 20 400 20" 
+                                          stroke="#FFD700" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-12 left-1/2 hidden md:flex flex-col items-center gap-2 text-xs tracking-widest opacity-50">
+            <span>SCROLL TO EXPLORE</span>
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-white to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-[#0A1428]">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 text-xs font-medium tracking-[2px] bg-white/10 rounded-full">OUR EXPERTISE</span>
+                <h2 class="text-5xl font-semibold tracking-tighter mt-4">Institutional-Grade Crypto Services for US & Global Clients</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-[#101D38] rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-[#00D4FF]/10 text-[#00D4FF] rounded-2xl flex items-center justify-center mb-8 text-3xl transition-all group-hover:rotate-12">
+                        📈
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Investment Advisory</h3>
+                    <p class="text-white/70 leading-relaxed">
+                        Personalized strategies for Bitcoin, Ethereum, altcoins and DeFi. 
+                        Risk-adjusted alpha generation tailored for US investors.
+                    </p>
+                    <a href="#" class="mt-10 text-[#00D4FF] flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">
+                        Explore <span class="text-xl">→</span>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-[#101D38] rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-[#FFD700]/10 text-[#FFD700] rounded-2xl flex items-center justify-center mb-8 text-3xl transition-all group-hover:-rotate-12">
+                        🛡️
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Security Audits</h3>
+                    <p class="text-white/70 leading-relaxed">
+                        Smart contract audits, wallet security, custody solutions & penetration testing.
+                    </p>
+                    <a href="#" class="mt-10 text-[#00D4FF] flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">
+                        Explore <span class="text-xl">→</span>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-[#101D38] rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-emerald-400/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-8 text-3xl transition-all group-hover:rotate-12">
+                        📊
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Portfolio Management</h3>
+                    <p class="text-white/70 leading-relaxed">
+                        Active & passive management. Rebalancing, tax optimization and 24/7 monitoring.
+                    </p>
+                    <a href="#" class="mt-10 text-[#00D4FF] flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">
+                        Explore <span class="text-xl">→</span>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-[#101D38] rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-purple-400/10 text-purple-400 rounded-2xl flex items-center justify-center mb-8 text-3xl transition-all group-hover:rotate-12">
+                        🔍
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Market Intelligence</h3>
+                    <p class="text-white/70 leading-relaxed">
+                        On-chain analytics, sentiment tracking, macro research and alpha signals.
+                    </p>
+                    <a href="#" class="mt-10 text-[#00D4FF] flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">
+                        Explore <span class="text-xl">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about" class="py-24 bg-gradient-to-b from-[#0A1428] to-[#0F1C33]">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-[#00D4FF] text-sm font-medium">EST. 2021 • MIAMI, FL</span>
+                    <h2 class="text-5xl font-semibold tracking-tighter mt-4 leading-none">Leading crypto wealth management in the United States</h2>
+                    <p class="mt-8 text-lg text-white/80 max-w-md">
+                        Headquartered in Miami — the crypto capital of the Americas — Zentoken combines Wall Street discipline with blockchain innovation to serve high-net-worth individuals, family offices, and institutions worldwide.
+                    </p>
+                    
+                    <div class="mt-12 grid grid-cols-2 gap-8">
+                        <div>
+                            <div class="text-5xl font-semibold text-[#FFD700]">98%</div>
+                            <div class="text-sm opacity-70">Client retention rate</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-semibold text-[#FFD700]">4.2x</div>
+                            <div class="text-sm opacity-70">Average portfolio growth</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="mt-10 inline-flex items-center gap-4 text-lg font-medium group">
+                        MEET THE TEAM 
+                        <span class="block h-px w-12 bg-white group-hover:w-20 transition-all"></span>
+                    </a>
+                </div>
+                
+                <div class="lg:col-span-7 grid md:grid-cols-2 gap-8">
+                    <div class="glass rounded-3xl p-6 flex gap-6">
+                        <img src="https://picsum.photos/id/1011/300/300" class="w-24 h-24 object-cover rounded-2xl" alt="Alex Rivera">
+                        <div>
+                            <div class="font-semibold">Alex Rivera</div>
+                            <div class="text-[#00D4FF] text-sm">Chief Investment Officer</div>
+                            <div class="text-xs mt-6 text-white/60 leading-relaxed">
+                                12 years at Goldman Sachs • Ex-head of digital assets at Coinbase
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-3xl p-6 flex gap-6">
+                        <img src="https://picsum.photos/id/64/300/300" class="w-24 h-24 object-cover rounded-2xl" alt="Priya Sharma">
+                        <div>
+                            <div class="font-semibold">Priya Sharma</div>
+                            <div class="text-[#00D4FF] text-sm">Head of Security</div>
+                            <div class="text-xs mt-6 text-white/60 leading-relaxed">
+                                Former lead auditor at Certik • Blockchain security expert
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-3xl p-6 flex gap-6">
+                        <img src="https://picsum.photos/id/201/300/300" class="w-24 h-24 object-cover rounded-2xl" alt="Marcus Chen">
+                        <div>
+                            <div class="font-semibold">Marcus Chen</div>
+                            <div class="text-[#00D4FF] text-sm">Portfolio Strategist</div>
+                            <div class="text-xs mt-6 text-white/60 leading-relaxed">
+                                Ex-Binance research lead • Quant PhD from MIT
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-3xl p-6 flex gap-6">
+                        <img src="https://picsum.photos/id/29/300/300" class="w-24 h-24 object-cover rounded-2xl" alt="Elena Voss">
+                        <div>
+                            <div class="font-semibold">Elena Voss</div>
+                            <div class="text-[#00D4FF] text-sm">Client Success Director</div>
+                            <div class="text-xs mt-6 text-white/60 leading-relaxed">
+                                15 years family office experience • CFA, CAIA
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GROWTH / METRICS -->
+    <section class="py-20 bg-[#0A1428]">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="border border-white/10 rounded-3xl py-12 transition-all hover:border-[#FFD700]">
+                    <div id="stat1" class="text-6xl font-semibold text-[#FFD700] stat-number">420</div>
+                    <div class="mt-3 text-white/70">Clients Worldwide</div>
+                </div>
+                <div class="border border-white/10 rounded-3xl py-12 transition-all hover:border-[#FFD700]">
+                    <div id="stat2" class="text-6xl font-semibold text-[#FFD700] stat-number">2.8</div>
+                    <div class="mt-3 text-white/70">Billion USD AUM</div>
+                </div>
+                <div class="border border-white/10 rounded-3xl py-12 transition-all hover:border-[#FFD700]">
+                    <div id="stat3" class="text-6xl font-semibold text-[#FFD700] stat-number">184</div>
+                    <div class="mt-3 text-white/70">% Avg. Annual Return</div>
+                </div>
+                <div class="border border-white/10 rounded-3xl py-12 transition-all hover:border-[#FFD700]">
+                    <div id="stat4" class="text-6xl font-semibold text-[#FFD700] stat-number">47</div>
+                    <div class="mt-3 text-white/70">Countries Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-24 bg-[#101D38]">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <h2 class="text-5xl font-semibold tracking-tighter">Why high-net-worth clients choose Zentoken</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#0A1428] rounded-3xl p-10 flex flex-col">
+                    <i class="fa-solid fa-shield-halved text-5xl text-[#00D4FF] mb-8"></i>
+                    <h3 class="text-3xl font-medium">Military-grade security</h3>
+                    <p class="mt-auto text-white/70">Multi-signature custody, cold storage, and insurance up to $500M per client.</p>
+                </div>
+                <div class="bg-[#0A1428] rounded-3xl p-10 flex flex-col">
+                    <i class="fa-solid fa-chart-line text-5xl text-[#FFD700] mb-8"></i>
+                    <h3 class="text-3xl font-medium">Proprietary alpha engine</h3>
+                    <p class="mt-auto text-white/70">AI + on-chain models that consistently outperform benchmarks.</p>
+                </div>
+                <div class="bg-[#0A1428] rounded-3xl p-10 flex flex-col">
+                    <i class="fa-solid fa-users text-5xl text-emerald-400 mb-8"></i>
+                    <h3 class="text-3xl font-medium">White-glove service</h3>
+                    <p class="mt-auto text-white/70">Dedicated relationship managers and quarterly strategy calls.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-[#0A1428]">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <h2 class="text-center text-5xl font-semibold tracking-tighter mb-12">What our clients say</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass rounded-3xl p-10">
+                    <div class="flex gap-1 text-[#FFD700] mb-6">★★★★★</div>
+                    <p class="italic text-lg leading-relaxed">
+                        “Zentoken turned my $800K crypto holdings into a $3.2M portfolio in 18 months. Their team is world-class.”
+                    </p>
+                    <div class="mt-10 flex items-center gap-4">
+                        <img src="https://picsum.photos/id/201/80/80" class="w-12 h-12 rounded-2xl" alt="">
+                        <div>
+                            <div class="font-medium">Michael Reynolds</div>
+                            <div class="text-sm text-white/50">Miami, FL • Family Office</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-3xl p-10">
+                    <div class="flex gap-1 text-[#FFD700] mb-6">★★★★★</div>
+                    <p class="italic text-lg leading-relaxed">
+                        “The security audit saved us from a $2.4M exploit. Best investment we ever made.”
+                    </p>
+                    <div class="mt-10 flex items-center gap-4">
+                        <img src="https://picsum.photos/id/64/80/80" class="w-12 h-12 rounded-2xl" alt="">
+                        <div>
+                            <div class="font-medium">Sophia Laurent</div>
+                            <div class="text-sm text-white/50">New York, NY • VC Fund</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-3xl p-10">
+                    <div class="flex gap-1 text-[#FFD700] mb-6">★★★★☆</div>
+                    <p class="italic text-lg leading-relaxed">
+                        “Their market intelligence is unmatched. We closed 3x on Solana positions thanks to their early signals.”
+                    </p>
+                    <div class="mt-10 flex items-center gap-4">
+                        <img src="https://picsum.photos/id/29/80/80" class="w-12 h-12 rounded-2xl" alt="">
+                        <div>
+                            <div class="font-medium">David Park</div>
+                            <div class="text-sm text-white/50">San Francisco, CA • HNWI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG / INSIGHTS -->
+    <section id="insights" class="py-24 bg-[#101D38]">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-xs font-medium tracking-widest text-[#00D4FF]">ZENTOKEN RESEARCH</span>
+                    <h2 class="text-5xl font-semibold tracking-tighter">Latest Insights</h2>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-3 text-[#FFD700] font-medium">
+                    VIEW ALL ARTICLES <span class="text-3xl leading-none">→</span>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-3xl aspect-video bg-black mb-6">
+                        <img src="https://picsum.photos/id/1015/800/450" class="w-full h-full object-cover transition-all group-hover:scale-110 duration-700" alt="">
+                        <div class="absolute top-4 left-4 bg-black/70 px-4 py-1 text-xs rounded-full">ETHEREUM</div>
+                    </div>
+                    <div class="text-sm text-[#00D4FF]">March 18, 2026</div>
+                    <h3 class="text-2xl font-medium mt-3 group-hover:text-[#FFD700] transition-colors">
+                        Why Ethereum ETFs will drive the next bull run
+                    </h3>
+                </div>
+                
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-3xl aspect-video bg-black mb-6">
+                        <img src="https://picsum.photos/id/160/800/450" class="w-full h-full object-cover transition-all group-hover:scale-110 duration-700" alt="">
+                        <div class="absolute top-4 left-4 bg-black/70 px-4 py-1 text-xs rounded-full">SECURITY</div>
+                    </div>
+                    <div class="text-sm text-[#00D4FF]">March 12, 2026</div>
+                    <h3 class="text-2xl font-medium mt-3 group-hover:text-[#FFD700] transition-colors">
+                        How to protect your crypto from quantum threats
+                    </h3>
+                </div>
+                
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-3xl aspect-video bg-black mb-6">
+                        <img src="https://picsum.photos/id/201/800/450" class="w-full h-full object-cover transition-all group-hover:scale-110 duration-700" alt="">
+                        <div class="absolute top-4 left-4 bg-black/70 px-4 py-1 text-xs rounded-full">STRATEGY</div>
+                    </div>
+                    <div class="text-sm text-[#00D4FF]">March 5, 2026</div>
+                    <h3 class="text-2xl font-medium mt-3 group-hover:text-[#FFD700] transition-colors">
+                        The case for 10% Bitcoin allocation in 2026 portfolios
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-[#0A1428]">
+        <div class="max-w-screen-2xl mx-auto px-8 grid lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-7">
+                <h2 class="text-5xl font-semibold tracking-tighter">Start your crypto journey today</h2>
+                <p class="mt-4 text-white/70">Schedule a 30-minute strategy call with our Miami-based team. No obligation.</p>
+                
+                <form id="contact-form" class="mt-12 space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <input type="text" placeholder="Full Name" class="bg-transparent border border-white/30 focus:border-[#00D4FF] rounded-2xl px-6 py-5 outline-none text-lg transition-all">
+                        <input type="email" placeholder="Email Address" class="bg-transparent border border-white/30 focus:border-[#00D4FF] rounded-2xl px-6 py-5 outline-none text-lg transition-all">
+                    </div>
+                    <input type="text" placeholder="Subject" class="bg-transparent border border-white/30 focus:border-[#00D4FF] rounded-2xl px-6 py-5 outline-none text-lg transition-all w-full">
+                    <textarea placeholder="Tell us about your investment goals..." rows="6" class="bg-transparent border border-white/30 focus:border-[#00D4FF] rounded-2xl px-6 py-5 outline-none text-lg transition-all w-full resize-none"></textarea>
+                    
+                    <button type="submit" class="w-full md:w-auto px-14 py-6 bg-gradient-to-r from-[#00D4FF] to-[#FFD700] text-[#0A1428] font-semibold text-xl rounded-3xl hover:scale-[1.02] transition-all shadow-2xl">
+                        SEND MESSAGE →
+                    </button>
+                </form>
+            </div>
+            
+            <div class="lg:col-span-5 space-y-12">
+                <div>
+                    <div class="text-sm opacity-60">HEADQUARTERS</div>
+                    <div class="text-2xl font-medium mt-2">Miami, Florida, United States</div>
+                    <div class="mt-8 space-y-6">
+                        <a href="mailto:hello@zentoken.com" class="flex items-center gap-6 group">
+                            <i class="fa-solid fa-envelope text-3xl text-[#00D4FF]"></i>
+                            <div>
+                                <div class="font-medium group-hover:text-[#FFD700]">hello@zentoken.com</div>
+                                <div class="text-xs text-white/40">Primary contact</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="rounded-3xl overflow-hidden border border-white/10 shadow-inner relative h-96">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3590.057!2d-80.191!3d25.7617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6e8b2e8f8f8%3A0x8e5f8f8f8f8f8f8f!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="absolute top-6 right-6 bg-white text-[#0A1428] px-5 py-3 rounded-2xl text-xs font-medium shadow-xl">
+                        HQ • Miami, FL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-20 border-t border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid md:grid-cols-12 gap-y-16">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-9 h-9 bg-gradient-to-br from-[#00D4FF] to-[#FFD700] rounded-2xl flex items-center justify-center">
+                            <span class="text-[#0A1428] font-bold text-3xl logo-font">Z</span>
+                        </div>
+                        <span class="logo-font text-4xl font-semibold tracking-tighter">Zentoken</span>
+                    </div>
+                    <p class="max-w-xs text-white/60">
+                        Premium cryptocurrency advisory for discerning investors — Miami, FL.
+                    </p>
+                    <div class="mt-8 flex gap-6 text-2xl">
+                        <i class="fa-brands fa-twitter hover:text-[#00D4FF] cursor-pointer"></i>
+                        <i class="fa-brands fa-linkedin hover:text-[#00D4FF] cursor-pointer"></i>
+                        <i class="fa-brands fa-telegram hover:text-[#00D4FF] cursor-pointer"></i>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <div class="text-xs font-medium tracking-widest opacity-50 mb-6">NAVIGATION</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#home" class="block hover:text-[#FFD700]">Home</a>
+                        <a href="#services" class="block hover:text-[#FFD700]">Services</a>
+                        <a href="#about" class="block hover:text-[#FFD700]">About Us</a>
+                        <a href="#insights" class="block hover:text-[#FFD700]">Insights</a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <div class="text-xs font-medium tracking-widest opacity-50 mb-6">LEGAL</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-[#FFD700]">Privacy Policy</a>
+                        <a href="#" class="block hover:text-[#FFD700]">Risk Disclosure</a>
+                        <a href="#" class="block hover:text-[#FFD700]">Terms of Service</a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-3">
+                    <div class="text-xs font-medium tracking-widest opacity-50 mb-6">STAY IN THE KNOW</div>
+                    <div class="relative">
+                        <input type="email" id="newsletter-email" class="w-full bg-transparent border border-white/30 rounded-2xl px-6 py-5 text-sm placeholder:text-white/40 focus:border-[#FFD700]" placeholder="your@email.com">
+                        <button onclick="subscribeNewsletter()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#0A1428] px-8 py-3 rounded-2xl text-xs font-bold">
+                            JOIN
+                        </button>
+                    </div>
+                    <p class="text-[10px] text-white/40 mt-6 leading-tight">
+                        Monthly market briefings and exclusive research.<br>
+                        Unsubscribe anytime.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-20 pt-8 border-t border-white/10 text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-white/40">
+                <div>© 2026 Zentoken LLC. All rights reserved.</div>
+                <div class="text-center">Cryptocurrency investments involve substantial risk of loss and are not suitable for all investors. This website is for informational purposes only and does not constitute financial, investment, or tax advice.</div>
+                <div>Made with precision in Miami, Florida</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+        
+        function animateCounters() {
+            const counters = [
+                { id: 'stat1', target: 420, suffix: '' },
+                { id: 'stat2', target: 2.8, suffix: '' },
+                { id: 'stat3', target: 184, suffix: '' },
+                { id: 'stat4', target: 47, suffix: '' }
+            ];
+            
+            counters.forEach(counter => {
+                let start = 0;
+                const element = document.getElementById(counter.id);
+                const increment = Math.ceil(counter.target / 40);
+                
+                const timer = setInterval(() => {
+                    start += increment;
+                    if (start >= counter.target) {
+                        start = counter.target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = start + counter.suffix;
+                }, 40);
+            });
+        }
+        
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'THANK YOU ✓';
+            btn.style.background = 'linear-gradient(to right, #22c55e, #16a34a)';
+            
+            setTimeout(() => {
+                alert("Thank you! Our team will contact you within 24 hours.");
+                form.reset();
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+            }, 1800);
+        });
+        
+        function subscribeNewsletter() {
+            const emailField = document.getElementById('newsletter-email');
+            if (emailField.value.trim() !== '') {
+                alert("Thank you! You've been added to our research list.");
+                emailField.value = '';
+            }
+        }
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                animateCounters();
+                window.removeEventListener('scroll', arguments.callee);
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key.toLowerCase() === 'b') {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+</html>
